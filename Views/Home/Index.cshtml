@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <p>Fullness: @ViewBag.MonsterInfo.Fullness</p>            
+        </div>
+        <div class="col">
+            <p>Happiness:@ViewBag.MonsterInfo.Happiness</p>            
+
+        </div>
+        <div class="col">
+            <p>Meals: @ViewBag.MonsterInfo.Meals</p>            
+
+        </div>
+        <div class="col">
+            <p>Energy: @ViewBag.MonsterInfo.Energy</p>            
+
+        </div>
+    </div>
+        <div  style="border: 1px solid black; width: 400px; height: 200px; margin-left: 300px">
+            <div style="width: 200px; height: 100px; border: 1px solid green; margin-left: 100px; margin-top: 50px;"> 
+                <img style="width: 50px;" src="~/image/pacman.gif" alt="Picture of me"/> 
+                <img style="width: 40px;" src="~/image/coin.gif" alt="Picture of me"/> 
+                <img style="width: 40px;" src="~/image/coin.gif" alt="Picture of me"/> 
+                <img style="width: 40px;" src="~/image/coin.gif" alt="Picture of me"/> 
+            </div>
+        </div>
+    <div class="row">
+        @if (ViewBag.DachiInfo.Status == 1)
+        {
+            <a class="btn" href="/feed">Feed</a>
+            <a class="btn" href="/play">Play</a>
+            <a class="btn" href="/work">Work</a>
+            <a class="btn" href="/sleep">Sleep</a>
+        } else {
+            <a class="btn" href="/reset">Restart?</a>
+        }
+
+
+    </div>
+</div>
